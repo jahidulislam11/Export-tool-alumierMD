@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
     res.json({ message: 'Hello, this is a Node.js + Express.js API!' });
 });
 
-app.get('/products', async (req, res) => {
+app.get('/export-products', async (req, res) => {
     try {
         const { rows } = await pool.query('SELECT * FROM spree_products LIMIT 10');
 
